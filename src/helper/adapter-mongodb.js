@@ -127,7 +127,7 @@ class MongoAdapter {
     const connection = await MongoClient.connect(config.dbPath/*process.env.MONGODB_URI*/, {
       useNewUrlParser: true,
     });
-    DB = connection.db(config.oidcDb/*connection.s.options.dbName*/);
+    DB = connection.db(config.oidcDb);
   }
 }
 
